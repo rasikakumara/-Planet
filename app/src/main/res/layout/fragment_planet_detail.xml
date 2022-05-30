@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.PlanetDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardBackgroundColor="@color/main_dark"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#7c7c7c"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/planet_detail_name_textView__Value" />
+
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#7c7c7c"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/planet_detail_orbital_period_textView_Value" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_name_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/planet_name"
+                    android:textColor="@color/light_gray"
+                    app:layout_constraintEnd_toStartOf="@+id/planet_detail_orbital_period_textView"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_name_textView__Value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/planet_detail_name_textView"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/planet_detail_name_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/planet_detail_name_textView"
+                    tools:text="Luke Skywalker" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_orbital_period_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="100dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/planet_orbital_period"
+                    android:textColor="@color/light_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toEndOf="@+id/planet_detail_name_textView"
+                    app:layout_constraintTop_toTopOf="@+id/planet_detail_name_textView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_orbital_period_textView_Value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/planet_detail_orbital_period_textView"
+                    app:layout_constraintStart_toStartOf="@+id/planet_detail_orbital_period_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/planet_detail_orbital_period_textView"
+                    tools:text="Blonde" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_gravity_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/planet_gravity"
+                    android:textColor="@color/light_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/planet_detail_orbital_period_textView"
+                    app:layout_constraintTop_toTopOf="@+id/planet_detail_orbital_period_textView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/planet_detail_gravity_textView_Value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/planet_detail_gravity_textView"
+                    app:layout_constraintStart_toStartOf="@+id/planet_detail_gravity_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/planet_detail_gravity_textView"
+                    tools:text="Fair" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

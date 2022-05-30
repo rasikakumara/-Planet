@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/planetFragment"
+        android:name="com.rasika.planets.ui.PlanetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_planet">
+        <action
+            android:id="@+id/action_planetFragment_to_planetDetailsFragment"
+            app:destination="@id/planetDetailsFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/planetDetailsFragment"
+        android:name="com.rasika.planets.ui.PlanetDetailFragment"
+        android:label="Planet Details"
+        tools:layout="@layout/fragment_planet_detail">
+        <argument
+            android:name="planetDetail"
+            app:argType="com.rasika.planets.model.Planet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.rasika.planets.ui.SplashFragment"
+        android:label=""
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_PlanetFragment"
+            app:destination="@id/planetFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
